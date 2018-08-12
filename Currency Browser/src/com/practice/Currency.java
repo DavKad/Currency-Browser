@@ -101,18 +101,16 @@ public class Currency {
         /*Getting data from the HTML file*/
         final Document document = Jsoup.connect("https://www.bzwbk.pl/przydatne-informacje/kursy-walut/dewizy/kursy-walut-dewizy.html").get();
 
+        /*Getting currency titles and values*/
         for (Element data : document.select("div.kw_date, table.kw_table tbody > tr")) {
-
-            if(dataCounter < 18) {
+            if (dataCounter < 18) {
                 title = data.select("td:lt(2)").text();
                 value = data.select("td:gt(1)").text();
 
                 titles.add(title);
                 values.add(value);
-                System.out.println(title);
-                System.out.println(value);
                 dataCounter++;
-            }else{
+            } else {
                 break;
             }
         }
