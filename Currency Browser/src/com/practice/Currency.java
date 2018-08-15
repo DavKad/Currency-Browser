@@ -1,5 +1,6 @@
 package com.practice;
 
+import jdk.nashorn.internal.objects.annotations.Getter;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -11,9 +12,8 @@ public class Currency {
     private String title;
     private Double saleValue;
     private Double purchaseValue;
-    private Double spreadValue;
-    private Double mediumValue;
-
+    private static ArrayList<Currency> PKOCurrencyValues = new ArrayList<>();
+    private static ArrayList<Currency> BZWBKCurrencyValues = new ArrayList<>();
 
     public Currency(String title, Double saleValue, Double purchaseValue) {
         this.title = title;
@@ -21,38 +21,25 @@ public class Currency {
         this.purchaseValue = purchaseValue;
     }
 
-    public Currency(String title, Double saleValue, Double purchaseValue, Double spreadValue, Double mediumValue) {
-        this.title = title;
-        this.saleValue = saleValue;
-        this.purchaseValue = purchaseValue;
-        this.spreadValue = spreadValue;
-        this.mediumValue = mediumValue;
-    }
-
+    @Getter
     public String getTitle() {
         return title;
     }
 
+    @Getter
     public Double getSaleValue() {
         return saleValue;
     }
 
+    @Getter
     public Double getPurchaseValue() {
         return purchaseValue;
     }
-
-    public Double getSpreadValue() {
-        return spreadValue;
-    }
-
-    public Double getMediumValue() {
-        return mediumValue;
-    }
+    
 
     public static ArrayList<Currency> getPKOCurrency() throws Exception {
 
         /*Declare structures*/
-        ArrayList<Currency> PKOCurrencyValues = new ArrayList<>();
         ArrayList<String> values = new ArrayList<>();
         ArrayList<String> titles = new ArrayList<>();
         String title, value, temp;
@@ -92,11 +79,11 @@ public class Currency {
 
     public static ArrayList<Currency> getBZWBKCurrency() throws Exception {
 
-        ArrayList<Currency> BZWBKCurrencyValues = new ArrayList<>();
+        /*Declare structures*/
         ArrayList<String> values = new ArrayList<>();
         ArrayList<String> titles = new ArrayList<>();
 
-        String title, value;
+        String title, value  , temp;
         int dataCounter = 0;
         /*Getting data from the HTML file*/
         final Document document = Jsoup.connect("https://www.bzwbk.pl/przydatne-informacje/kursy-walut/dewizy/kursy-walut-dewizy.html").get();
@@ -105,10 +92,14 @@ public class Currency {
         for (Element data : document.select("div.kw_date, table.kw_table tbody > tr")) {
             if (dataCounter < 18) {
                 title = data.select("td:lt(2)").text();
-                value = data.select("td:gt(1)").text();
-
+                Elements row = data.select("td");
+                for(int i = 2; i < row.size() - 2; i++) {
+                    Element getTD = row.get(i);
+                    temp = getTD.select("td").text();
+                    value = temp;
+                    values.add(value);
+                }
                 titles.add(title);
-                values.add(value);
                 dataCounter++;
             } else {
                 break;
