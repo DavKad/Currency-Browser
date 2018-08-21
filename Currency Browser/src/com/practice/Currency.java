@@ -35,15 +35,16 @@ public class Currency {
     public Double getPurchaseValue() {
         return purchaseValue;
     }
-    
+
 
     public static ArrayList<Currency> getPKOCurrency() throws Exception {
 
         /*Declare structures*/
-        ArrayList<String> values = new ArrayList<>();
         ArrayList<String> titles = new ArrayList<>();
-        String title, value, temp;
-        int tableCounter = 0;
+        ArrayList<Double> purchaseValue = new ArrayList<>();
+        ArrayList<Double> saleValue = new ArrayList<>();
+        String title, value;
+        int tableCounter = 0, valuesCounter = 0;
 
         /*Getting data from the HTML file*/
         final Document document = Jsoup.connect("https://www.pkobp.pl/waluty/").get();
@@ -59,20 +60,37 @@ public class Currency {
 
         /*Getting currency values*/
         for (Element data : document.select("div.course > table.course__table")) {
-            if (tableCounter < 22) {
+            if (valuesCounter < 22) {
                 Elements getTd = data.select("td");
-                for (int i = 1; i < getTd.size(); i++) {
-                    Element column = getTd.get(i);
-                    temp = column.select("td").text();
-                    if (!(temp.contains("%") || temp.contains("S"))) {
-                        value = temp;
-                        values.add(value);
+                for (int i = 2; i < getTd.size() - 1; i++) {
+                    if (i == 2 || i == 6) {
+                        Element column = getTd.get(i);
+                        value = column.select("td").text();
+                        if (i == 2) {
+                            if (!(value.contains("nd."))) {
+                                purchaseValue.add(Double.parseDouble(value));
+                            } else {
+                                purchaseValue.add(Double.NaN);
+                            }
+                        }
+                        if (i == 6) {
+                            if (!(value.contains("nd."))) {
+                                saleValue.add(Double.parseDouble(value));
+                            } else {
+                                saleValue.add(Double.NaN);
+                            }
+                        }
                     }
                 }
             } else {
                 break;
             }
-            tableCounter++;
+            valuesCounter++;
+        }
+
+        /*Fill list of Currency objects*/
+        for (int i = 0; i < titles.size(); i++) {
+            PKOCurrencyValues.add(new Currency(titles.get(i), saleValue.get(i), purchaseValue.get(i)));
         }
         return PKOCurrencyValues;
     }
@@ -80,30 +98,39 @@ public class Currency {
     public static ArrayList<Currency> getBZWBKCurrency() throws Exception {
 
         /*Declare structures*/
-        ArrayList<String> values = new ArrayList<>();
         ArrayList<String> titles = new ArrayList<>();
-
-        String title, value  , temp;
+        ArrayList<Double> saleValues = new ArrayList<>();
+        ArrayList<Double> purchaseValues = new ArrayList<>();
+        String title, value;
         int dataCounter = 0;
+
         /*Getting data from the HTML file*/
         final Document document = Jsoup.connect("https://www.bzwbk.pl/przydatne-informacje/kursy-walut/dewizy/kursy-walut-dewizy.html").get();
 
         /*Getting currency titles and values*/
-        for (Element data : document.select("div.kw_date, table.kw_table tbody > tr")) {
-            if (dataCounter < 18) {
-                title = data.select("td:lt(2)").text();
+        for (Element data : document.select("table.kw_table tbody > tr")) {
+            if (dataCounter < 17) {
+                title = data.select("td:lt(1)").text();
                 Elements row = data.select("td");
-                for(int i = 2; i < row.size() - 2; i++) {
+                for (int i = 2; i < row.size() - 2; i++) {
                     Element getTD = row.get(i);
-                    temp = getTD.select("td").text();
-                    value = temp;
-                    values.add(value);
+                    value = getTD.select("td").text();
+                    if (i % 2 == 0)
+                        purchaseValues.add(Double.parseDouble(value));
+                    else
+                        saleValues.add(Double.parseDouble(value));
                 }
                 titles.add(title);
                 dataCounter++;
             } else {
                 break;
             }
+
+        }
+
+        /*Fill list of Currency objects*/
+        for (int i = 0; i < titles.size(); i++) {
+            BZWBKCurrencyValues.add(new Currency(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
         }
         return BZWBKCurrencyValues;
     }
