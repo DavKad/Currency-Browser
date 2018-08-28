@@ -12,8 +12,8 @@ public class GetCurrencyProperties {
     private String title;
     private Double saleValue;
     private Double purchaseValue;
-    private static ArrayList<GetCurrencyProperties> PKOCurrencyValues = new ArrayList<>();
-    private static ArrayList<GetCurrencyProperties> BZWBKCurrencyValues = new ArrayList<>();
+    static ArrayList<GetCurrencyProperties> PKOCurrencyProperties = new ArrayList<>();
+    static ArrayList<GetCurrencyProperties> BZWBKCurrencyProperties = new ArrayList<>();
 
     public GetCurrencyProperties(String title, Double saleValue, Double purchaseValue) {
         this.title = title;
@@ -90,9 +90,9 @@ public class GetCurrencyProperties {
         }
         /*Fill list of Currency objects*/
         for (int i = 0; i < titles.size(); i++) {
-            PKOCurrencyValues.add(new GetCurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
+            PKOCurrencyProperties.add(new GetCurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
         }
-        return PKOCurrencyValues;
+        return PKOCurrencyProperties;
     }
 
     public static ArrayList<GetCurrencyProperties> getBZWBKCurrency() throws Exception {
@@ -128,8 +128,8 @@ public class GetCurrencyProperties {
         }
         /*Fill list of Currency objects*/
         for (int i = 0; i < titles.size(); i++) {
-            BZWBKCurrencyValues.add(new GetCurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
+            BZWBKCurrencyProperties.add(new GetCurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
         }
-        return BZWBKCurrencyValues;
+        return BZWBKCurrencyProperties;
     }
 }

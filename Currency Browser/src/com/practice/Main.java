@@ -12,10 +12,9 @@ public class Main {
             banks.add(GetCurrencyProperties.getPKOCurrency());
             banks.add(GetCurrencyProperties.getBZWBKCurrency());
 
-
             /*CONCEPT*/
             String exampleWord = "Euro";
-            CurrencyComparison.findByName(banks, exampleWord);
+            CurrencyComparison.findCurrencyByNameInPKO(banks, exampleWord);
 
         } catch (Exception e) {
             e.printStackTrace();
