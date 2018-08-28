@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/practice/Currency.java" line="46" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="6faaea5a-8eaf-40ca-9695-ebbb484ce64e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -51,22 +48,38 @@
     <session id="-1132147996">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="2" />
+          <entry key="project.open.time.29" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1799" />
+          <entry key="dummy" value="14" />
+          <entry key="java" value="3543" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1799" />
+          <entry key="JAVA" value="3543" />
+          <entry key="PLAIN_TEXT" value="14" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.file.types.open" />
-      <usages-collector id="statistics.file.extensions.open" />
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="4" />
+          <entry key="JAVA" value="6" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="4" />
+          <entry key="java" value="6" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
@@ -74,21 +87,39 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/practice/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+            <state relative-caret-position="408">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/practice/GetCurrencyProperties.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+              <folding>
+                <element signature="method#equals#0;class#GetCurrencyProperies#0" />
+                <element signature="method#getPKOCurrency#0;class#GetCurrencyProperies#0" />
+                <element signature="method#getBZWBKCurrency#0;class#GetCurrencyProperies#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/practice/Currency.java">
+        <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/practice/CurrencyComparison.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="483">
-              <caret line="119" column="24" lean-forward="true" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
+            <state relative-caret-position="136">
+              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#737#738#0" expanded="true" />
-                <element signature="e#765#766#0" expanded="true" />
+                <element signature="method#findByName#0;class#CurrencyComparison#0" />
               </folding>
             </state>
           </provider>
@@ -112,8 +143,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/practice/Bank.java" />
-        <option value="$PROJECT_DIR$/src/com/practice/Main.java" />
         <option value="$PROJECT_DIR$/src/com/practice/Currency.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/GetCurrencyProperies.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/CurrencyComparison.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/GetCurrencyProperties.java" />
       </list>
     </option>
   </component>
@@ -127,15 +161,19 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Currency Browser" type="b2602c69:ProjectViewProjectNode" />
               <item name="Currency Browser" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Currency Browser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Currency Browser" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Currency Browser" type="b2602c69:ProjectViewProjectNode" />
@@ -148,14 +186,30 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="practice" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Currency Browser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="Currency Browser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="jsoup-1.11.3" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="Currency Browser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="jsoup-1.11.3" type="70bed36:NamedLibraryElementNode" />
+              <item name="jsoup-1.11.3.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534878746080" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1535432191125" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -223,13 +277,13 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Learn" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.12953092" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.13166311" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.329718" />
       <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
@@ -301,24 +355,79 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/practice/Bank.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/practice/Main.java">
+    <entry file="jar://E:/Programy/jdk1.8.0_161/jre/lib/rt.jar!/java/lang/Object.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        <state relative-caret-position="238">
+          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
+          <folding>
+            <element signature="e#348#349#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Programy/jdk1.8.0_161/jre/lib/rt.jar!/java/lang/String.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="310" column="19" selection-start-line="310" selection-start-column="19" selection-end-line="310" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/practice/Currency.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="119" column="24" lean-forward="true" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
+        <state relative-caret-position="357">
+          <caret line="27" column="87" lean-forward="true" selection-end-line="135" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/practice/GetCurrencyProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/practice/CurrencyComparison.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#737#738#0" expanded="true" />
-            <element signature="e#765#766#0" expanded="true" />
+            <element signature="method#findByName#0;class#CurrencyComparison#0" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Currency Browser/com/practice/GetCurrencyProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#4899#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/practice/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/practice/GetCurrencyProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="method#equals#0;class#GetCurrencyProperies#0" />
+            <element signature="method#getPKOCurrency#0;class#GetCurrencyProperies#0" />
+            <element signature="method#getBZWBKCurrency#0;class#GetCurrencyProperies#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">

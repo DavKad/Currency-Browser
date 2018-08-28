@@ -8,17 +8,25 @@ import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 
-public class Currency {
+public class GetCurrencyProperties {
     private String title;
     private Double saleValue;
     private Double purchaseValue;
-    private static ArrayList<Currency> PKOCurrencyValues = new ArrayList<>();
-    private static ArrayList<Currency> BZWBKCurrencyValues = new ArrayList<>();
+    private static ArrayList<GetCurrencyProperties> PKOCurrencyValues = new ArrayList<>();
+    private static ArrayList<GetCurrencyProperties> BZWBKCurrencyValues = new ArrayList<>();
 
-    public Currency(String title, Double saleValue, Double purchaseValue) {
+    public GetCurrencyProperties(String title, Double saleValue, Double purchaseValue) {
         this.title = title;
         this.saleValue = saleValue;
         this.purchaseValue = purchaseValue;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || this.getClass() != o.getClass()) return false;
+        return this.getSaleValue().equals(((GetCurrencyProperties) o).getSaleValue()) &&
+                this.getPurchaseValue().equals(((GetCurrencyProperties) o).getPurchaseValue());
     }
 
     @Getter
@@ -36,14 +44,13 @@ public class Currency {
         return purchaseValue;
     }
 
-
-    public static ArrayList<Currency> getPKOCurrency() throws Exception {
+    public static ArrayList<GetCurrencyProperties> getPKOCurrency() throws Exception {
 
         /*Declare structures*/
         ArrayList<String> titles = new ArrayList<>();
-        ArrayList<Double> purchaseValue = new ArrayList<>();
-        ArrayList<Double> saleValue = new ArrayList<>();
-        String title, value;
+        ArrayList<Double> purchaseValues = new ArrayList<>();
+        ArrayList<Double> saleValues = new ArrayList<>();
+        String title, saleValue, purchaseValue;
         int tableCounter = 0, valuesCounter = 0;
 
         /*Getting data from the HTML file*/
@@ -62,40 +69,33 @@ public class Currency {
         for (Element data : document.select("div.course > table.course__table")) {
             if (valuesCounter < 22) {
                 Elements getTd = data.select("td");
-                for (int i = 2; i < getTd.size() - 1; i++) {
-                    if (i == 2 || i == 6) {
-                        Element column = getTd.get(i);
-                        value = column.select("td").text();
-                        if (i == 2) {
-                            if (!(value.contains("nd."))) {
-                                purchaseValue.add(Double.parseDouble(value));
-                            } else {
-                                purchaseValue.add(Double.NaN);
-                            }
-                        }
-                        if (i == 6) {
-                            if (!(value.contains("nd."))) {
-                                saleValue.add(Double.parseDouble(value));
-                            } else {
-                                saleValue.add(Double.NaN);
-                            }
-                        }
-                    }
+                Element purchaseColumn = getTd.get(2);
+                purchaseValue = purchaseColumn.select("td").text();
+                if (!(purchaseValue.contains("nd."))) {
+                    purchaseValues.add(Double.parseDouble(purchaseValue));
+                } else {
+                    purchaseValues.add(Double.NaN);
+                }
+                Element saleColumn = getTd.get(6);
+                saleValue = saleColumn.select("td").text();
+                if (!(saleValue.contains("nd."))) {
+                    saleValues.add(Double.parseDouble(saleValue));
+                } else {
+                    saleValues.add(Double.NaN);
                 }
             } else {
                 break;
             }
             valuesCounter++;
         }
-
         /*Fill list of Currency objects*/
         for (int i = 0; i < titles.size(); i++) {
-            PKOCurrencyValues.add(new Currency(titles.get(i), saleValue.get(i), purchaseValue.get(i)));
+            PKOCurrencyValues.add(new GetCurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
         }
         return PKOCurrencyValues;
     }
 
-    public static ArrayList<Currency> getBZWBKCurrency() throws Exception {
+    public static ArrayList<GetCurrencyProperties> getBZWBKCurrency() throws Exception {
 
         /*Declare structures*/
         ArrayList<String> titles = new ArrayList<>();
@@ -125,12 +125,10 @@ public class Currency {
             } else {
                 break;
             }
-
         }
-
         /*Fill list of Currency objects*/
         for (int i = 0; i < titles.size(); i++) {
-            BZWBKCurrencyValues.add(new Currency(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
+            BZWBKCurrencyValues.add(new GetCurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
         }
         return BZWBKCurrencyValues;
     }

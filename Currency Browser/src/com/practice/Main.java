@@ -7,10 +7,15 @@ public class Main {
     public static void main(String[] args) {
         try {
 
-            /*List which contains Lists with Currency instances and theirs properites*/
-            ArrayList<ArrayList<Currency>> banks = new ArrayList<>();
-            banks.add(Currency.getPKOCurrency());
-            banks.add(Currency.getBZWBKCurrency());
+            /*List which contains Lists with GetCurrencyProperties instances*/
+            ArrayList<ArrayList<GetCurrencyProperties>> banks = new ArrayList<>();
+            banks.add(GetCurrencyProperties.getPKOCurrency());
+            banks.add(GetCurrencyProperties.getBZWBKCurrency());
+
+
+            /*CONCEPT*/
+            String exampleWord = "Euro";
+            CurrencyComparison.findByName(banks, exampleWord);
 
         } catch (Exception e) {
             e.printStackTrace();
