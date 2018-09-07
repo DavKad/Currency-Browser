@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="toSwap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="317.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.practice.controllers.MainWindowController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="browseButton" layoutX="75.0" layoutY="141.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="167.0" text="Browse currencies" />
+            <Button fx:id="buttonFind" layoutX="75.0" layoutY="183.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="167.0" text="Find currency" />
+            <Button fx:id="buttonCompare" layoutX="75.0" layoutY="228.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="167.0" text="Compare currencies" />
+            <Button fx:id="buttonExit" layoutX="243.0" layoutY="272.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="60.0" text="Exit" />
+            <ImageView fitHeight="92.0" fitWidth="192.0" layoutX="113.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../logo.png" />
+               </image></ImageView>
+         </children>
+      </Pane>
+   </children>
+</StackPane>

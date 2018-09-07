@@ -1,8 +1,11 @@
 package com.practice;
 
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
@@ -16,19 +19,18 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-
         /*List which contains Lists with GetCurrencyProperties instances*/
         ArrayList<ArrayList<GetCurrencyProperties>> banks = new ArrayList<>();
         banks.add(GetCurrencyProperties.getPKOCurrency());
         banks.add(GetCurrencyProperties.getBZWBKCurrency());
 
         /*Main Window GUI*/
-        FXMLLoader mainWindow = new FXMLLoader();
-        mainWindow.setLocation(this.getClass().getResource("resources/MainWindow.fxml"));
-        StackPane stackPane = mainWindow.load();
+        StackPane stackPane = FXMLLoader.load(getClass().getResource("controllers/resources/MainWindow.fxml"));
         Scene scene = new Scene(stackPane);
+        primaryStage.getIcons().add(new Image("com/practice/logo.png"));
         primaryStage.setScene(scene);
         primaryStage.setTitle("Currency Browser");
         primaryStage.show();
+        primaryStage.setOnCloseRequest(s -> Platform.exit());
     }
 }

@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import static com.practice.GetCurrencyProperties.PKOCurrencyProperties;
 import static com.practice.GetCurrencyProperties.BZWBKCurrencyProperties;
 
-public class CurrencyComparison implements Comparable<GetCurrencyProperties> {
+public class CurrencyComparison {
 
     public static void findCurrencyByNameInPKO(ArrayList<ArrayList<GetCurrencyProperties>> banks, @NotNull String word) {
         for (ArrayList<GetCurrencyProperties> x : banks) {
@@ -29,9 +29,5 @@ public class CurrencyComparison implements Comparable<GetCurrencyProperties> {
                 }
         }
     }
-    /*TODO Currency Values Comparison Method*/
-    @Override
-    public int compareTo(GetCurrencyProperties getCurrencyProperties) {
-        return 0;
-    }
+
 }
