@@ -22,7 +22,7 @@ public class Main extends Application {
         /*List which contains Lists with GetCurrencyProperties instances*/
         ArrayList<ArrayList<GetCurrencyProperties>> banks = new ArrayList<>();
         banks.add(GetCurrencyProperties.getPKOCurrency());
-        banks.add(GetCurrencyProperties.getBZWBKCurrency());
+//        banks.add(GetCurrencyProperties.getSTDCurrency());
 
         /*Main Window GUI*/
         StackPane stackPane = FXMLLoader.load(getClass().getResource("controllers/resources/MainWindow.fxml"));

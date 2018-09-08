@@ -7,35 +7,35 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="740.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.practice.controllers.BrowseWindowController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="573.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.practice.controllers.BrowseWindowController">
    <children>
       <Pane prefHeight="464.0" prefWidth="456.0">
          <children>
-            <TabPane layoutX="-3.0" layoutY="-1.0" prefHeight="417.0" prefWidth="746.0" tabClosingPolicy="UNAVAILABLE">
+            <TabPane layoutX="-3.0" layoutY="-1.0" prefHeight="417.0" prefWidth="573.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
                 <Tab text="PKO Bank Polski">
                      <content>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                        <AnchorPane prefHeight="383.0" prefWidth="573.0">
                            <children>
-                              <Button layoutX="670.0" layoutY="346.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="28.0" prefWidth="56.0" text="Exit" />
+                              <Button fx:id = "buttonBack" layoutX="503.0" layoutY="333.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="32.0" prefWidth="60.0" text="&lt; Back" />
                            </children>
                         </AnchorPane>
                      </content>
                   </Tab>
-                <Tab text="Bank Zachodni WBK">
+                <Tab text="Santander Bank Polska S.A.">
                      <content>
                         <AnchorPane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="670.0" layoutY="346.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="28.0" prefWidth="56.0" text="Exit" />
+                               <Button layoutX="503.0" layoutY="333.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="32.0" prefWidth="60.0" text="&lt; Back" />
                            </children>
                         </AnchorPane>
                      </content>
                   </Tab>
-                  <Tab text="PEKO S.A">
+                  <Tab text="PEKO S.A.">
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="670.0" layoutY="346.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="28.0" prefWidth="56.0" text="Exit" />
+                               <Button layoutX="503.0" layoutY="333.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="32.0" prefWidth="60.0" text="&lt; Back" />
                            </children></AnchorPane>
                     </content>
                   </Tab>
@@ -43,7 +43,7 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="670.0" layoutY="346.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="28.0" prefWidth="56.0" text="Exit" />
+                               <Button layoutX="503.0" layoutY="333.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="32.0" prefWidth="60.0" text="&lt; Back" />
                            </children></AnchorPane>
                     </content>
                   </Tab>
@@ -51,7 +51,7 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="670.0" layoutY="346.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="28.0" prefWidth="56.0" text="Exit" />
+                               <Button layoutX="503.0" layoutY="333.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="32.0" prefWidth="60.0" text="&lt; Back" />
                            </children></AnchorPane>
                     </content>
                   </Tab>
@@ -59,7 +59,7 @@
                     <content>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Button layoutX="670.0" layoutY="346.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="28.0" prefWidth="56.0" text="Exit" />
+                               <Button layoutX="503.0" layoutY="333.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="32.0" prefWidth="60.0" text="&lt; Back" />
                            </children></AnchorPane>
                     </content>
                   </Tab>

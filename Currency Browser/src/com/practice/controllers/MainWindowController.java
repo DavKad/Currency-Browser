@@ -22,11 +22,12 @@ public class MainWindowController  {
     public Button buttonCompare;
 
     @FXML
-    public Button buttonExit;
+    public StackPane toSwap;
 
     @FXML
     void initialize(){
-        browseButton.setOnAction( s ->{
+
+        browseButton.setOnAction(s ->{
             try {
                 StackPane stack = FXMLLoader.load(getClass().getResource("resources/BrowseWindow.fxml"));
                 Scene scene = new Scene(stack);
@@ -39,9 +40,14 @@ public class MainWindowController  {
                 e.printStackTrace();
             }
         });
-        //TODO Closing a main window
-        buttonExit.setOnAction(s -> {
 
+        buttonFind.setOnAction(s -> {
+            try {
+                StackPane stack = FXMLLoader.load(getClass().getResource("resources/FindWindow.fxml"));
+                toSwap.getChildren().setAll(stack);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         });
     }
 }
