@@ -95,41 +95,41 @@ public class GetCurrencyProperties {
         return PKOCurrencyProperties;
     }
 
-//    public static ArrayList<GetCurrencyProperties> getSTDCurrency() throws Exception {
-//
-//        /*Declare structures*/
-//        ArrayList<String> titles = new ArrayList<>();
-//        ArrayList<Double> saleValues = new ArrayList<>();
-//        ArrayList<Double> purchaseValues = new ArrayList<>();
-//        String title, value;
-//        int dataCounter = 0;
-//
-//        /*Getting data from the HTML file*/
-//        final Document document = Jsoup.connect("https://www.bzwbk.pl/przydatne-informacje/kursy-walut/dewizy/kursy-walut-dewizy.html").get();
-//
-//        /*Getting currency titles and values*/
-//        for (Element data : document.select("table.kw_table tbody > tr")) {
-//            if (dataCounter < 17) {
-//                title = data.select("td:lt(1)").text();
-//                Elements row = data.select("td");
-//                for (int i = 2; i < row.size() - 2; i++) {
-//                    Element getTD = row.get(i);
-//                    value = getTD.select("td").text();
-//                    if (i % 2 == 0)
-//                        purchaseValues.add(Double.parseDouble(value));
-//                    else
-//                        saleValues.add(Double.parseDouble(value));
-//                }
-//                titles.add(title);
-//                dataCounter++;
-//            } else {
-//                break;
-//            }
-//        }
-//        /*Fill list of Currency objects*/
-//        for (int i = 0; i < titles.size(); i++) {
-//            STDCurrencyProperties.add(new GetCurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
-//        }
-//        return STDCurrencyProperties;
-//    }
+    public static ArrayList<GetCurrencyProperties> getSTDCurrency() throws Exception {
+
+        /*Declare structures*/
+        ArrayList<String> titles = new ArrayList<>();
+        ArrayList<Double> saleValues = new ArrayList<>();
+        ArrayList<Double> purchaseValues = new ArrayList<>();
+        String title, value;
+        int dataCounter = 0;
+
+        /*Getting data from the HTML file*/
+        final Document document = Jsoup.connect("https://santander.pl/przydatne-informacje/kursy-walut/dewizy/kursy-walut-dewizy.html").get();
+
+        /*Getting currency titles and values*/
+        for (Element data : document.select("table.kw_table tbody > tr")) {
+            if (dataCounter < 17) {
+                title = data.select("td:lt(1)").text();
+                Elements row = data.select("td");
+                for (int i = 2; i < row.size() - 2; i++) {
+                    Element getTD = row.get(i);
+                    value = getTD.select("td").text();
+                    if (i % 2 == 0)
+                        purchaseValues.add(Double.parseDouble(value));
+                    else
+                        saleValues.add(Double.parseDouble(value));
+                }
+                titles.add(title);
+                dataCounter++;
+            } else {
+                break;
+            }
+        }
+        /*Fill list of Currency objects*/
+        for (int i = 0; i < titles.size(); i++) {
+            STDCurrencyProperties.add(new GetCurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
+        }
+        return STDCurrencyProperties;
+    }
 }
