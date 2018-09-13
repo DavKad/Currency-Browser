@@ -48,45 +48,50 @@
     <session id="-1132147996">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.29" value="1" />
           <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.36" value="1" />
           <entry key="project.open.time.46" value="1" />
-          <entry key="project.open.time.50" value="1" />
+          <entry key="project.open.time.50" value="2" />
+          <entry key="project.open.time.52" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.76" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.open.time.95" value="1" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="14" />
-          <entry key="fxml" value="232" />
-          <entry key="java" value="7593" />
+          <entry key="dummy" value="20" />
+          <entry key="fxml" value="423" />
+          <entry key="java" value="13943" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7593" />
-          <entry key="PLAIN_TEXT" value="14" />
-          <entry key="XML" value="232" />
+          <entry key="JAVA" value="13943" />
+          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="XML" value="423" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="5" />
-          <entry key="JAVA" value="42" />
-          <entry key="XML" value="38" />
+          <entry key="Image" value="1" />
+          <entry key="JAVA" value="88" />
+          <entry key="XML" value="66" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="5" />
-          <entry key="fxml" value="37" />
-          <entry key="java" value="42" />
+          <entry key="fxml" value="65" />
+          <entry key="java" value="88" />
+          <entry key="png" value="1" />
           <entry key="xml" value="1" />
         </counts>
       </usages-collector>
@@ -100,17 +105,46 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/practice/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+            <state>
+              <caret column="21" selection-start-column="21" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/practice/CurrencyConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/FindController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+              <folding>
+                <element signature="method#fillComboBoxAction#0;class#FindController#0" />
+                <element signature="method#specifiedButtonAction#0;class#FindController#0" />
+                <element signature="method#initialize#0;class#FindController#0" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/practice/GetCurrencyProperties.java">
+        <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/ConvertWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="105" selection-start-line="105" selection-end-line="105" />
+            <state relative-caret-position="330">
+              <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#specifiedButtonAction#0;class#ConvertWindow#0" />
+                <element signature="method#fillComboBoxAction#0;class#ConvertWindow#0" />
+                <element signature="method#initialize#0;class#ConvertWindow#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,6 +157,7 @@
         <option value="package-info" />
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -144,14 +179,23 @@
         <option value="$PROJECT_DIR$/src/com/practice/MainWindowController.java" />
         <option value="$PROJECT_DIR$/src/com/practice/resources/BrowseWindow.fxml" />
         <option value="$PROJECT_DIR$/src/com/practice/CurrencyComparison.java" />
-        <option value="$PROJECT_DIR$/src/com/practice/controllers/MainWindowController.java" />
         <option value="$PROJECT_DIR$/src/com/practice/controllers/BrowseWindowController.java" />
-        <option value="$PROJECT_DIR$/src/com/practice/controllers/resources/FindWindow.fxml" />
-        <option value="$PROJECT_DIR$/src/com/practice/controllers/resources/BrowseWindow.fxml" />
-        <option value="$PROJECT_DIR$/src/com/practice/controllers/FindController.java" />
-        <option value="$PROJECT_DIR$/src/com/practice/controllers/resources/MainWindow.fxml" />
-        <option value="$PROJECT_DIR$/src/com/practice/Main.java" />
         <option value="$PROJECT_DIR$/src/com/practice/GetCurrencyProperties.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/controllers/resources/MainWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/com/practice/controllers/MainWindowController.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/CurrencyFinder.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/controllers/resources/BrowseWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/com/practice/controllers/BrowseController.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/CurrencyProperties.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/controllers/resources/FindWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/com/practice/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/controllers/Selection.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/controllers/MainController.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/controllers/resources/ConvertWindow.fxml" />
+        <option value="$PROJECT_DIR$/src/com/practice/CurrencyConverter.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/interfaces/Selection.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/controllers/ConvertWindow.java" />
+        <option value="$PROJECT_DIR$/src/com/practice/controllers/FindController.java" />
       </list>
     </option>
   </component>
@@ -161,7 +205,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1612" />
@@ -172,7 +216,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
@@ -208,24 +251,33 @@
               <item name="controllers" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Currency Browser" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Currency Browser" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536403535007" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536867635206" />
+    <property name="last_opened_file_path" value="E:/Pobrane/controlsfx-8.40.14.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Git_ROOT\Currency Browser\Currency Browser\src\com\practice\controllers\resources" />
       <recent name="E:\Git_ROOT\Currency Browser\Currency Browser\src\resources" />
       <recent name="E:\Git_ROOT\Currency Browser\Currency Browser\src\com\practice" />
       <recent name="E:\Git_ROOT\Currency Browser\Currency Browser" />
@@ -278,12 +330,16 @@
       <workItem from="1536353961058" duration="24000" />
       <workItem from="1536390286406" duration="4811000" />
       <workItem from="1536412079736" duration="266000" />
-      <workItem from="1536431979223" duration="45000" />
+      <workItem from="1536431979223" duration="335000" />
+      <workItem from="1536486927871" duration="2555000" />
+      <workItem from="1536490061658" duration="40245000" />
+      <workItem from="1536850594227" duration="15596000" />
+      <workItem from="1536869310208" duration="80000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36140000" />
+    <option name="totallyTimeSpent" value="94906000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -304,7 +360,7 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Learn" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.13272922" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.13646056" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
@@ -327,6 +383,7 @@
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="9" side_tool="true" weight="0.32995737" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="0" />
@@ -335,14 +392,14 @@
       <window_info id="UI Designer" order="3" />
       <window_info id="Learn" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.12846482" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.13539445" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50053304" side_tool="true" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49946696" visible="true" weight="0.33188722" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49946696" weight="0.33188722" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
@@ -358,6 +415,7 @@
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" x="0" y="0" width="434" height="856" id="Documentation" order="9" side_tool="true" weight="0.32995737" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,9 +462,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/practice/Currency.java" />
-    <entry file="file://$PROJECT_DIR$/out/production/Currency Browser/com/practice/GetCurrencyProperties.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Currency Browser/com/practice/GetCurrencyProperties.class" />
     <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -440,72 +496,140 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/practice/resources/package-info.java" />
     <entry file="file://$PROJECT_DIR$/src/com/practice/resources/BrowseWindow.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/practice/CurrencyComparison.java">
+    <entry file="jar://E:/Programy/jdk1.8.0_161/javafx-src.zip!/com/sun/javafx/event/CompositeEventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="197">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/BrowseWindowController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/practice/CurrencyFinder.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/resources/logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/practice/ConvertWindow.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/resources/BrowseWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="1020">
+          <caret line="63" column="30" lean-forward="true" selection-start-line="63" selection-start-column="30" selection-end-line="63" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/BrowseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Programy/jdk1.8.0_161/javafx-src.zip!/javafx/scene/control/cell/PropertyValueFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="112" column="11" selection-start-line="112" selection-start-column="11" selection-end-line="112" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Programy/jdk1.8.0_161/javafx-src.zip!/javafx/scene/control/TableColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4393">
+          <caret line="135" column="19" selection-start-line="135" selection-start-column="19" selection-end-line="135" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/resources/FindWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="220" lean-forward="true" selection-start-line="6" selection-start-column="220" selection-end-line="6" selection-end-column="220" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/resources/BrowseWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="31" lean-forward="true" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/FindController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/MainWindowController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+        <state relative-caret-position="340">
+          <caret line="20" column="131" lean-forward="true" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="131" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/resources/MainWindow.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="58" selection-start-line="23" selection-start-column="58" selection-end-line="23" selection-end-column="58" />
+        <state relative-caret-position="170">
+          <caret line="10" column="112" lean-forward="true" selection-start-line="10" selection-start-column="112" selection-end-line="10" selection-end-column="148" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/practice/CurrencyProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getPKOCurrency#0;class#CurrencyProperties#0" />
+            <element signature="method#getSTDCurrency#0;class#CurrencyProperties#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://E:/Programy/jdk1.8.0_161/javafx-src.zip!/javafx/scene/control/Toggle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="83" column="11" selection-start-line="83" selection-start-column="11" selection-end-line="83" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/resources/ConvertWindow.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="35" column="14" lean-forward="true" selection-start-line="35" selection-start-column="14" selection-end-line="35" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/practice/interfaces/Selection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/practice/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="24" column="58" selection-start-line="24" selection-start-column="58" selection-end-line="24" selection-end-column="58" />
+        <state>
+          <caret column="21" selection-start-column="21" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/practice/GetCurrencyProperties.java">
+    <entry file="file://$PROJECT_DIR$/src/com/practice/CurrencyConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="105" selection-start-line="105" selection-end-line="105" />
+        <state relative-caret-position="153">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/FindController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="86" column="5" selection-start-line="86" selection-start-column="5" selection-end-line="86" selection-end-column="5" />
+          <folding>
+            <element signature="method#fillComboBoxAction#0;class#FindController#0" />
+            <element signature="method#specifiedButtonAction#0;class#FindController#0" />
+            <element signature="method#initialize#0;class#FindController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/practice/controllers/ConvertWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#specifiedButtonAction#0;class#ConvertWindow#0" />
+            <element signature="method#fillComboBoxAction#0;class#ConvertWindow#0" />
+            <element signature="method#initialize#0;class#ConvertWindow#0" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -574,7 +698,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jsoup-1.11.3</last-edited>
+          <last-edited>controlsfx-8.40.14</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

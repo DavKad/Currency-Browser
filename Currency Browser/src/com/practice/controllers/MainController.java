@@ -10,18 +10,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class MainWindowController  {
+public class MainController {
 
     @FXML
     public Button browseButton;
-
-    @FXML
     public Button buttonFind;
-
-    @FXML
-    public Button buttonCompare;
-
-    @FXML
+    public Button buttonConverter;
     public StackPane toSwap;
 
     @FXML
@@ -34,7 +28,7 @@ public class MainWindowController  {
                 Stage stage = new Stage();
                 stage.setScene(scene);
                 stage.setTitle("Currency Browser");
-                stage.getIcons().add(new Image("com/practice/logo.png"));
+                stage.getIcons().add(new Image("com/practice/controllers/resources/logo.png"));
                 stage.show();
             } catch (IOException e) {
                 e.printStackTrace();
@@ -46,6 +40,15 @@ public class MainWindowController  {
                 StackPane stack = FXMLLoader.load(getClass().getResource("resources/FindWindow.fxml"));
                 toSwap.getChildren().setAll(stack);
             } catch (IOException e) {
+                e.printStackTrace();
+            }
+        });
+
+        buttonConverter.setOnAction(s -> {
+            try{
+                StackPane stack = FXMLLoader.load(getClass().getResource("resources/ConvertWindow.fxml"));
+                toSwap.getChildren().setAll(stack);
+            } catch (IOException e){
                 e.printStackTrace();
             }
         });

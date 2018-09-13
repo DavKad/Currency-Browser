@@ -8,25 +8,15 @@ import org.jsoup.select.Elements;
 
 import java.util.ArrayList;
 
-public class GetCurrencyProperties {
+public class CurrencyProperties {
     private String title;
     private Double saleValue;
     private Double purchaseValue;
-    static ArrayList<GetCurrencyProperties> PKOCurrencyProperties = new ArrayList<>();
-    static ArrayList<GetCurrencyProperties> STDCurrencyProperties = new ArrayList<>();
 
-    public GetCurrencyProperties(String title, Double saleValue, Double purchaseValue) {
+    public CurrencyProperties(String title, Double saleValue, Double purchaseValue) {
         this.title = title;
         this.saleValue = saleValue;
         this.purchaseValue = purchaseValue;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || this.getClass() != o.getClass()) return false;
-        return this.getSaleValue().equals(((GetCurrencyProperties) o).getSaleValue()) &&
-                this.getPurchaseValue().equals(((GetCurrencyProperties) o).getPurchaseValue());
     }
 
     @Getter
@@ -34,19 +24,19 @@ public class GetCurrencyProperties {
         return title;
     }
 
-    @Getter
     public Double getSaleValue() {
         return saleValue;
     }
 
-    @Getter
     public Double getPurchaseValue() {
         return purchaseValue;
     }
 
-    public static ArrayList<GetCurrencyProperties> getPKOCurrency() throws Exception {
+    static ArrayList<CurrencyProperties> getPKOCurrency() throws Exception {
 
         /*Declare structures*/
+        ArrayList<CurrencyProperties> PKOCurrencyProperties = new ArrayList<>();
+
         ArrayList<String> titles = new ArrayList<>();
         ArrayList<Double> purchaseValues = new ArrayList<>();
         ArrayList<Double> saleValues = new ArrayList<>();
@@ -90,14 +80,16 @@ public class GetCurrencyProperties {
         }
         /*Fill list of Currency objects*/
         for (int i = 0; i < titles.size(); i++) {
-            PKOCurrencyProperties.add(new GetCurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
+            PKOCurrencyProperties.add(new CurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
         }
         return PKOCurrencyProperties;
     }
 
-    public static ArrayList<GetCurrencyProperties> getSTDCurrency() throws Exception {
+    static ArrayList<CurrencyProperties> getSTDCurrency() throws Exception {
 
         /*Declare structures*/
+        ArrayList<CurrencyProperties> STDCurrencyProperties = new ArrayList<>();
+
         ArrayList<String> titles = new ArrayList<>();
         ArrayList<Double> saleValues = new ArrayList<>();
         ArrayList<Double> purchaseValues = new ArrayList<>();
@@ -128,7 +120,7 @@ public class GetCurrencyProperties {
         }
         /*Fill list of Currency objects*/
         for (int i = 0; i < titles.size(); i++) {
-            STDCurrencyProperties.add(new GetCurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
+            STDCurrencyProperties.add(new CurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
         }
         return STDCurrencyProperties;
     }

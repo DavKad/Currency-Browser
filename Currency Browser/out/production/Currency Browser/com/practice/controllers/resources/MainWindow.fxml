@@ -8,22 +8,22 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane fx:id="toSwap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="317.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.practice.controllers.MainWindowController">
+<StackPane fx:id="toSwap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="318.0" prefWidth="317.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.practice.controllers.MainController">
    <children>
       <Pane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <Button fx:id="browseButton" layoutX="75.0" layoutY="141.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="167.0" text="Browse currencies" />
-            <Button fx:id="buttonFind" layoutX="75.0" layoutY="183.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="167.0" text="Find currency" />
-            <Button fx:id="buttonCompare" layoutX="75.0" layoutY="228.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="167.0" text="Compare currencies" />
+            <Button fx:id="browseButton" layoutX="76.0" layoutY="143.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="167.0" text="Browse currencies" />
+            <Button fx:id="buttonFind" layoutX="76.0" layoutY="185.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="167.0" text="Find currency" />
             <ImageView fitHeight="92.0" fitWidth="192.0" layoutX="113.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../logo.png" />
+                  <Image url="@logo.png" />
                </image></ImageView>
             <Text layoutY="314.0" opacity="0.5" strokeType="OUTSIDE" strokeWidth="0.0" text="Created by Dawid Kądziołka" wrappingWidth="157.13671875">
                <font>
                   <Font name="System Italic" size="8.0" />
                </font>
             </Text>
+            <Button fx:id="buttonConverter" layoutX="76.0" layoutY="227.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="167.0" text="Convert currency" />
          </children>
       </Pane>
    </children>
