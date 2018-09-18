@@ -18,4 +18,5 @@ public class CurrencyConverter {
     public Double convertCurrencyFromPLN(Double value) {
         return value / exchangeRate;
     }
+
 }

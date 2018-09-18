@@ -2,6 +2,7 @@ package com.practice.controllers;
 
 import com.practice.CurrencyProperties;
 import com.practice.interfaces.Selection;
+import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -11,7 +12,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
@@ -79,8 +79,8 @@ public class FindController implements Selection {
             ObservableList<CurrencyProperties> currencyList = FXCollections.observableArrayList(
                     new CurrencyProperties(currencySelection, sale, purchase)
             );
-            saleValue.setCellValueFactory(new PropertyValueFactory<>("saleValue"));
-            purchaseValue.setCellValueFactory(new PropertyValueFactory<>("purchaseValue"));
+            saleValue.setCellValueFactory(s -> new ReadOnlyObjectWrapper<>(s.getValue().getSaleValue()));
+            purchaseValue.setCellValueFactory(s -> new ReadOnlyObjectWrapper<>(s.getValue().getPurchaseValue()));
             currencyTable.setItems(currencyList);
             currencyTable.setVisible(true);
         }
@@ -91,10 +91,8 @@ public class FindController implements Selection {
         /*Bank ComboBox*/
         bankComboBox.getItems().add("PKO Bank Polski S.A.");
         bankComboBox.getItems().add("Santander Bank Polski S.A.");
-        bankComboBox.getItems().add("PEKO S.A");
         bankComboBox.getItems().add("ING Bank Śląski");
         bankComboBox.getItems().add("mBank");
-        bankComboBox.getItems().add("Bank Milenium");
 
         /*Fill currency ComboBox*/
         bankComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {

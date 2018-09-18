@@ -79,9 +79,8 @@ public class CurrencyProperties {
             valuesCounter++;
         }
         /*Fill list of Currency objects*/
-        for (int i = 0; i < titles.size(); i++) {
+        for (int i = 0; i < titles.size(); i++)
             PKOCurrencyProperties.add(new CurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
-        }
         return PKOCurrencyProperties;
     }
 
@@ -119,9 +118,75 @@ public class CurrencyProperties {
             }
         }
         /*Fill list of Currency objects*/
-        for (int i = 0; i < titles.size(); i++) {
+        for (int i = 0; i < titles.size(); i++)
             STDCurrencyProperties.add(new CurrencyProperties(titles.get(i), saleValues.get(i), purchaseValues.get(i)));
-        }
         return STDCurrencyProperties;
     }
+
+    static ArrayList<CurrencyProperties> getINGCurrency() throws Exception {
+
+        /*Declare structures*/
+        ArrayList<CurrencyProperties> INGCurrencyProperties = new ArrayList<>();
+        ArrayList<String> titles = new ArrayList<>();
+        ArrayList<Double> saleValues = new ArrayList<>();
+        ArrayList<Double> purchaseValue = new ArrayList<>();
+        String title, value;
+
+        /*Getting data from the HTML file*/
+        final Document document = Jsoup.connect("https://www.ingbank.pl/kursy-walut").get();
+
+        /*Getting currency titles and values*/
+        for (Element data : document.select("table tbody.table_body > tr")) {
+            title = data.select("td.col_1").text();
+            Elements row = data.select("td");
+            for (int i = 3; i < row.size() - 2; i++) {
+                Element getTD = row.get(i);
+                value = getTD.select("td").text().substring(0, 5).replace(',', '.');
+                if (i % 3 == 0)
+                    purchaseValue.add(Double.parseDouble(value));
+                else
+                    saleValues.add(Double.parseDouble(value));
+            }
+            titles.add(title);
+        }
+        /*Fill list of Currency objects*/
+        for (int i = 0; i < titles.size(); i++)
+            INGCurrencyProperties.add(new CurrencyProperties(titles.get(i), saleValues.get(i), purchaseValue.get(i)));
+
+        return INGCurrencyProperties;
+    }
+
+    static ArrayList<CurrencyProperties> getMBKCurrency() throws Exception {
+        /*Declare structures*/
+        ArrayList<CurrencyProperties> MBKCurrencyProperties = new ArrayList<>();
+        ArrayList<String> titles = new ArrayList<>();
+        ArrayList<Double> saleValues = new ArrayList<>();
+        ArrayList<Double> purchaseValue = new ArrayList<>();
+        String title, value;
+
+        /*Getting data from the HTML file*/
+        final Document document = Jsoup.connect("https://www.mbank.pl/serwis-ekonomiczny/kursy-walut/").get();
+        /*Getting currency titles and values*/
+        for (Element data : document.select("div.table_0 > table.default tbody > tr")) {
+            title = data.select("td.first").text();
+            if (!(title.equals(""))){
+                Elements row = data.select("td");
+                for (int i = 4; i < row.size() - 3; i++) {
+                    Element getID = row.get(i);
+                    value = getID.select("td").text();
+                    if (i % 4 == 0)
+                        purchaseValue.add(Double.parseDouble(value));
+                    else
+                        saleValues.add(Double.parseDouble(value));
+                }
+                titles.add(title);
+            }
+        }
+        for (int i = 0; i < titles.size(); i++)
+            MBKCurrencyProperties.add(new CurrencyProperties(titles.get(i), saleValues.get(i), purchaseValue.get(i)));
+
+        return MBKCurrencyProperties;
+    }
+
+
 }

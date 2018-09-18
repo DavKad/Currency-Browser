@@ -37,19 +37,21 @@ public class ConvertWindow implements Selection {
 
     @Override
     public void makeWarningNotification(String message) {
-       notification = Notifications.create()
-               .title("Warning!")
-               .text(message)
-               .hideAfter(Duration.seconds(5))
-               .position(Pos.BOTTOM_RIGHT);
+        notification = Notifications.create()
+                .title("Warning!")
+                .text(message)
+                .hideAfter(Duration.seconds(5))
+                .position(Pos.BOTTOM_RIGHT);
     }
+
     @Override
     public void specifiedButtonAction() {
         if (banksCombo.getItems().isEmpty() || currencyCombo.getSelectionModel().isEmpty()) {
             makeWarningNotification("You didn't choose bank or currency");
             notification.showWarning();
         } else {
-            if (moneyValue.getText().trim().isEmpty()) { ;
+            if (moneyValue.getText().trim().isEmpty()) {
+                ;
                 makeWarningNotification("You didn't set money value");
                 notification.showWarning();
             } else {
@@ -65,12 +67,23 @@ public class ConvertWindow implements Selection {
                             }
                         }
                         CurrencyConverter converter = new CurrencyConverter();
+                        double exchangeValue;
                         if (((RadioButton) toggleRadioButton.getSelectedToggle()).getText().equals("on PLN")) {
                             converter.setExchangeRate(saleValue);
-                            result.setText(Double.toString(converter.convertCurrencyToPLN(Double.parseDouble(moneyValue.getText()))));
+                            if (moneyValue.getText().contains(",")) {
+                                exchangeValue = Double.parseDouble(moneyValue.getText().replace(',', '.'));
+                            } else {
+                                exchangeValue = Double.parseDouble(moneyValue.getText());
+                            }
+                            result.setText(Double.toString(converter.convertCurrencyToPLN(exchangeValue)));
                         } else {
                             converter.setExchangeRate(purchaseValue);
-                            result.setText(Double.toString(converter.convertCurrencyFromPLN(Double.parseDouble(moneyValue.getText()))));
+                            if (moneyValue.getText().contains(",")) {
+                                exchangeValue = Double.parseDouble(moneyValue.getText().replace(',', '.'));
+                            } else {
+                                exchangeValue = Double.parseDouble(moneyValue.getText());
+                            }
+                            result.setText(Double.toString(converter.convertCurrencyFromPLN(exchangeValue)));
                         }
                         resultInfo.setVisible(true);
                         result.setVisible(true);
@@ -82,6 +95,7 @@ public class ConvertWindow implements Selection {
             }
         }
     }
+
     @Override
     public void fillComboBoxAction() {
         currencyCombo.getItems().clear();
@@ -99,10 +113,8 @@ public class ConvertWindow implements Selection {
         /*ChoiceBox*/
         banksCombo.getItems().add("PKO Bank Polski S.A.");
         banksCombo.getItems().add("Santander Bank Polski S.A.");
-        banksCombo.getItems().add("PEKO S.A");
         banksCombo.getItems().add("ING Bank Śląski");
         banksCombo.getItems().add("mBank");
-        banksCombo.getItems().add("Bank Milenium");
 
 
         onPLN.setToggleGroup(toggleRadioButton);

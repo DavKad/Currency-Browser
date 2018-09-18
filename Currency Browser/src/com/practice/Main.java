@@ -24,8 +24,12 @@ public class Main extends Application {
         /*Loading data from Banks Websites*/
         ArrayList<CurrencyProperties> PKOCurrency = CurrencyProperties.getPKOCurrency();
         ArrayList<CurrencyProperties> STDCurrency = CurrencyProperties.getSTDCurrency();
+        ArrayList<CurrencyProperties> INGCurrency = CurrencyProperties.getINGCurrency();
+        ArrayList<CurrencyProperties> MBKCurrency = CurrencyProperties.getMBKCurrency();
         banks.put("PKO Bank Polski S.A.", PKOCurrency);
         banks.put("Santander Bank Polski S.A.", STDCurrency);
+        banks.put("ING Bank Śląski",INGCurrency);
+        banks.put("mBank", MBKCurrency);
 
         /*Main Window GUI*/
         StackPane stackPane = FXMLLoader.load(getClass().getResource("controllers/resources/MainWindow.fxml"));
